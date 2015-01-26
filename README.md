@@ -1,2 +1,2 @@
 #Various algorithms implementations
-This repository contains my implementations of various algorithms I implement to better understand the subject of algorithm design and analysis.
+This repo contains various algorithm implementations in C++ I came up with while studying algorithm design and analysis.
