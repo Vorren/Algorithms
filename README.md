@@ -1,2 +1,2 @@
-# Coursera_Stanford_Algorithms
-Coursera: Algorithms design and analysis course 2015
+#Various algorithms implementations
+This repository contains my implementations of various algorithms I implement to better understand the subject of algorithm design and analysis.

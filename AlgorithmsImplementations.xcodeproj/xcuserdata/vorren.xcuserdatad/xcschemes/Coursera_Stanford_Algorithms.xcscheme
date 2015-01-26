@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42CCE5961A76D26F00C0034C"
-               BuildableName = "Coursera_Stanford_Algorithms"
-               BlueprintName = "Coursera_Stanford_Algorithms"
-               ReferencedContainer = "container:Coursera_Stanford_Algorithms.xcodeproj">
+               BuildableName = "AlgorithmsImplementations"
+               BlueprintName = "AlgorithmsImplementations"
+               ReferencedContainer = "container:AlgorithmsImplementations.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42CCE5961A76D26F00C0034C"
-            BuildableName = "Coursera_Stanford_Algorithms"
-            BlueprintName = "Coursera_Stanford_Algorithms"
-            ReferencedContainer = "container:Coursera_Stanford_Algorithms.xcodeproj">
+            BuildableName = "AlgorithmsImplementations"
+            BlueprintName = "AlgorithmsImplementations"
+            ReferencedContainer = "container:AlgorithmsImplementations.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42CCE5961A76D26F00C0034C"
-            BuildableName = "Coursera_Stanford_Algorithms"
-            BlueprintName = "Coursera_Stanford_Algorithms"
-            ReferencedContainer = "container:Coursera_Stanford_Algorithms.xcodeproj">
+            BuildableName = "AlgorithmsImplementations"
+            BlueprintName = "AlgorithmsImplementations"
+            ReferencedContainer = "container:AlgorithmsImplementations.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42CCE5961A76D26F00C0034C"
-            BuildableName = "Coursera_Stanford_Algorithms"
-            BlueprintName = "Coursera_Stanford_Algorithms"
-            ReferencedContainer = "container:Coursera_Stanford_Algorithms.xcodeproj">
+            BuildableName = "AlgorithmsImplementations"
+            BlueprintName = "AlgorithmsImplementations"
+            ReferencedContainer = "container:AlgorithmsImplementations.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

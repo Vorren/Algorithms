@@ -23,7 +23,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		42CCE5971A76D26F00C0034C /* Coursera_Stanford_Algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Coursera_Stanford_Algorithms; sourceTree = BUILT_PRODUCTS_DIR; };
+		42CCE5971A76D26F00C0034C /* AlgorithmsImplementations */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmsImplementations; sourceTree = BUILT_PRODUCTS_DIR; };
 		42CCE59A1A76D26F00C0034C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -41,7 +41,7 @@
 		42CCE58E1A76D26F00C0034C = {
 			isa = PBXGroup;
 			children = (
-				42CCE5991A76D26F00C0034C /* Coursera_Stanford_Algorithms */,
+				42CCE5991A76D26F00C0034C /* AlgorithmsImplementations */,
 				42CCE5981A76D26F00C0034C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +49,25 @@
 		42CCE5981A76D26F00C0034C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42CCE5971A76D26F00C0034C /* Coursera_Stanford_Algorithms */,
+				42CCE5971A76D26F00C0034C /* AlgorithmsImplementations */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		42CCE5991A76D26F00C0034C /* Coursera_Stanford_Algorithms */ = {
+		42CCE5991A76D26F00C0034C /* AlgorithmsImplementations */ = {
 			isa = PBXGroup;
 			children = (
 				42CCE59A1A76D26F00C0034C /* main.cpp */,
 			);
-			path = Coursera_Stanford_Algorithms;
+			path = AlgorithmsImplementations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		42CCE5961A76D26F00C0034C /* Coursera_Stanford_Algorithms */ = {
+		42CCE5961A76D26F00C0034C /* AlgorithmsImplementations */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 42CCE59E1A76D26F00C0034C /* Build configuration list for PBXNativeTarget "Coursera_Stanford_Algorithms" */;
+			buildConfigurationList = 42CCE59E1A76D26F00C0034C /* Build configuration list for PBXNativeTarget "AlgorithmsImplementations" */;
 			buildPhases = (
 				42CCE5931A76D26F00C0034C /* Sources */,
 				42CCE5941A76D26F00C0034C /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = Coursera_Stanford_Algorithms;
+			name = AlgorithmsImplementations;
 			productName = Coursera_Stanford_Algorithms;
-			productReference = 42CCE5971A76D26F00C0034C /* Coursera_Stanford_Algorithms */;
+			productReference = 42CCE5971A76D26F00C0034C /* AlgorithmsImplementations */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +96,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 42CCE5921A76D26F00C0034C /* Build configuration list for PBXProject "Coursera_Stanford_Algorithms" */;
+			buildConfigurationList = 42CCE5921A76D26F00C0034C /* Build configuration list for PBXProject "AlgorithmsImplementations" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -108,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				42CCE5961A76D26F00C0034C /* Coursera_Stanford_Algorithms */,
+				42CCE5961A76D26F00C0034C /* AlgorithmsImplementations */,
 			);
 		};
 /* End PBXProject section */
@@ -202,21 +202,21 @@
 		42CCE59F1A76D26F00C0034C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AlgorithmsImplementations;
 			};
 			name = Debug;
 		};
 		42CCE5A01A76D26F00C0034C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = AlgorithmsImplementations;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		42CCE5921A76D26F00C0034C /* Build configuration list for PBXProject "Coursera_Stanford_Algorithms" */ = {
+		42CCE5921A76D26F00C0034C /* Build configuration list for PBXProject "AlgorithmsImplementations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42CCE59C1A76D26F00C0034C /* Debug */,
@@ -225,13 +225,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		42CCE59E1A76D26F00C0034C /* Build configuration list for PBXNativeTarget "Coursera_Stanford_Algorithms" */ = {
+		42CCE59E1A76D26F00C0034C /* Build configuration list for PBXNativeTarget "AlgorithmsImplementations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				42CCE59F1A76D26F00C0034C /* Debug */,
 				42CCE5A01A76D26F00C0034C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

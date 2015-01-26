@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Coursera_Stanford_Algorithms.xcodeproj">
+      location = "self:AlgorithmsImplementations.xcodeproj">
    </FileRef>
 </Workspace>
