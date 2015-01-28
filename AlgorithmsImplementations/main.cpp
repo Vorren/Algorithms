@@ -9,6 +9,8 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <fstream>
+#include <string>
 
 //
 //mergesort
@@ -66,7 +68,7 @@ std::vector<T> mergeSort(std::vector<T>& data){
 //inversion counting in array
 //
 template<typename T>
-std::pair<std::vector<T>, int> mergeAndCountSplitInversions(std::vector<T>& b, std::vector<T>& c){
+std::pair<std::vector<T>, unsigned long long int> mergeAndCountSplitInversions(std::vector<T>& b, std::vector<T>& c){
     int split = 0;
     std::vector<T> d;
     d.reserve(b.size() + c.size());
@@ -96,7 +98,7 @@ std::pair<std::vector<T>, int> mergeAndCountSplitInversions(std::vector<T>& b, s
 }
 
 template<typename T>
-std::pair<std::vector<T>, int> sortAndCountInversions(std::vector<T>& a){
+std::pair<std::vector<T>, unsigned long long int> sortAndCountInversions(std::vector<T>& a){
     auto n = a.size();
     if(n<=1){
         return std::make_pair(a, 0);
@@ -115,11 +117,11 @@ std::pair<std::vector<T>, int> sortAndCountInversions(std::vector<T>& a){
     
     auto z = mergeAndCountSplitInversions( b, c );
     
-    int leftInversions = x.second;
-    int rightInversions = y.second;
-    int splitInversions = z.second;
+    auto leftInversions = x.second;
+    auto rightInversions = y.second;
+    auto splitInversions = z.second;
     
-    int totalInversions = leftInversions + rightInversions + splitInversions;
+    auto totalInversions = leftInversions + rightInversions + splitInversions;
     
     auto& d = z.first;
     
@@ -137,12 +139,13 @@ int main(int argc, const char * argv[]) {
     }
     
     //inversion counting test
-    std::vector<int> inversionCount_data {1, 3, 5, 2, 4, 6, 0};
+    std::vector<int> inversionCount_data{0,3,1,2,10,11,9}; // {1, 3, 5, 2, 4, 6};
     auto inversionCount_output = sortAndCountInversions(inversionCount_data);
     std::cout << "Inversion count: " << inversionCount_output.second << std::endl;
     for(auto& o : inversionCount_output.first){
         std::cout << o << std::endl;
     }
+    
     return 0;
 }
 
