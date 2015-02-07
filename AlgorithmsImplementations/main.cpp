@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <fstream>
 #include <string>
+#include <utility>
 
 //
 //mergesort
@@ -47,21 +48,21 @@ std::vector<T> merge(std::vector<T>& data, std::vector<T>& left, std::vector<T>&
 }
 
 template<typename T>
-std::vector<T> mergeSort(std::vector<T>& data){
+std::vector<T> mergeSort(std::vector<T>& a){
     
-    if(data.size() == 1){
-        return data;
+    if(a.size() <= 1){
+        return a;
     }
 
-    auto middle = data.begin() + int(data.size() * 0.5f);
+    auto middle = a.begin() + int(a.size() * 0.5f);
     
-    std::vector<T> left( data.begin(), middle );
-    std::vector<T> right( middle, data.end() );
+    std::vector<T> left( a.begin(), middle );
+    std::vector<T> right( middle, a.end() );
     
     auto sortedLeft = mergeSort(left);
     auto sortedRight = mergeSort(right);
     
-    return merge(data, sortedLeft, sortedRight);
+    return merge(a, sortedLeft, sortedRight);
 }
 
 //
@@ -99,8 +100,8 @@ std::pair<std::vector<T>, unsigned long long int> mergeAndCountSplitInversions(s
 
 template<typename T>
 std::pair<std::vector<T>, unsigned long long int> sortAndCountInversions(std::vector<T>& a){
-    auto n = a.size();
-    if(n<=1){
+ 
+    if(a.size()<=1){
         return std::make_pair(a, 0);
     }
     
@@ -128,10 +129,74 @@ std::pair<std::vector<T>, unsigned long long int> sortAndCountInversions(std::ve
     return std::make_pair( d, totalInversions );
 }
 
+//
+//Quicksort
+//
+template<typename T>
+size_t choosePivotIndex(std::vector<T>& a, size_t left, size_t right){
+    size_t i;
+    
+    auto l = a[left];
+    auto m = a[(right - left) / 2 + left ];
+    auto r = a[right - 1];
+    
+    std::vector<T> v{l,m,r};
+    auto sorted = mergeSort(v);
+    
+    if(sorted[1] == l){
+        i = left;
+    }else if(sorted[1] == m){
+        i = (right - left) / 2 + left;
+    }else{
+        i = right - 1;
+    }
+    
+    return i;
+}
+
+template<typename T>
+size_t partition( std::vector<T>& a, size_t left, size_t right ){
+    auto pivotIndex = choosePivotIndex(a, left, right);
+    
+    std::swap(a[left], a[pivotIndex]);
+    
+    auto pivot = a[left];
+    
+    auto i = left;
+    
+    for(auto j = left + 1; j < right; ++j)
+    {
+        if(a[j]< pivot)
+        {
+            ++i;
+            std::swap(a[i], a[j]);
+        }
+        
+    }
+    std::swap(a[i], a[left]);
+    return i;
+
+}
+
+template <typename T>
+void quickSort(std::vector<T>& a, size_t startIndex, size_t endIndex ){
+    
+    if(startIndex < endIndex){
+        auto rightIndex = partition(a, startIndex, endIndex);
+        quickSort(a, startIndex, rightIndex);
+        quickSort(a, rightIndex + 1, endIndex);
+    }
+}
+
+//
+//
+//
 
 int main(int argc, const char * argv[]) {
     
     //mergesort test
+    std::cout<<"====================="<<std::endl;
+    std::cout<<"Mergesort"<<std::endl;
     std::vector<int> mergesort_data {9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7, -8, -9};
     auto mergesort_output = mergeSort(mergesort_data);
     for(auto& o : mergesort_output){
@@ -139,6 +204,8 @@ int main(int argc, const char * argv[]) {
     }
     
     //inversion counting test
+    std::cout<<"====================="<<std::endl;
+    std::cout<<"Sorting and inversion counting"<<std::endl;
     std::vector<int> inversionCount_data{0,3,1,2,10,11,9}; // {1, 3, 5, 2, 4, 6};
     auto inversionCount_output = sortAndCountInversions(inversionCount_data);
     std::cout << "Inversion count: " << inversionCount_output.second << std::endl;
@@ -146,6 +213,32 @@ int main(int argc, const char * argv[]) {
         std::cout << o << std::endl;
     }
     
+    //quicksort test
+    std::cout<<"====================="<<std::endl;
+    std::cout<<"Quicksort"<<std::endl;
+    std::vector<int> quicksort_data {9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7, -8, -9};
+    quickSort(quicksort_data, 0, quicksort_data.size());
+    for(auto& o : quicksort_data){
+        std::cout << o << std::endl;
+    }
+
+    ////from file sample code
+//    std::vector<int> fromFile;
+//    fromFile.reserve(50);
+//    
+//    std::ifstream file("");
+//    std::string str;
+//    while (std::getline(file, str))
+//    {
+//        fromFile.push_back(std::stoi(str));
+//    }
+//    
+//    quickSort(fromFile, 0, fromFile.size());
+//    for(auto& o : fromFile){
+//        std::cout << o << std::endl;
+//    }
+    
     return 0;
 }
-
+///Left Comparisons num: 162085
+///Right Comparisons num: 164123
